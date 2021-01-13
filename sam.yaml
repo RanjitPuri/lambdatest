@@ -1,0 +1,19 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: CD Demo Lambda
+Resources:
+  lambdafour:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: lambdafunctionfour.lambda_handler
+      Runtime: python3.6
+      CodeUri: ./FunctionFour
+      Description: 'Lambda function for 4'
+  Hello34:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      AutoPublishAlias: qaTest
+      Handler: lambdafunctionthree.lambda_handler
+      Runtime: python3.6
+      CodeUri: ./FunctionThree
+      Description: 'Hello sjadjjsda'
